@@ -1,0 +1,24 @@
+<button
+		type="button"
+		id="menu-btn"
+		class="action-btn"
+		menu-toggle
+		ng-if="!data.showBackBtn"
+		>
+	<i class="fa fa-bars"></i>Menu
+</button>
+
+<button
+		type="button"
+		ng-click="back()"
+		id="back-btn"
+		ng-if="data.showBackBtn"
+		class="action-btn">
+	Back
+</button>
+
+<h2 class="title">{{data.title}}</h2>
+
+<div class="right-btns" ng-if="data.actions">
+	<div data-action-item data-type="{{action.type}}" class="action-item-container" data-action="action" ng-repeat="action in data.actions"></div>
+</div>

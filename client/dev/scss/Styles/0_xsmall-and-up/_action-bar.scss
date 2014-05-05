@@ -1,0 +1,54 @@
+#header {
+  position:absolute;
+  width:100%;
+  height: try-set($action-bar, height, xsmall);
+  line-height: try-set($action-bar, height, xsmall);
+  z-index: try-set($action-bar, z-index, xsmall);
+  background: try-set($action-bar, bg, xsmall);
+  text-align: center;
+
+  .right-btns {
+	float:right;
+  }
+
+  .title {
+	display:none;
+  }
+}
+
+.action-btn {
+  display:inline-block;
+  background: try-set($action-bar, bg, xsmall);
+  border-color:try-set($action-bar-buttons, border-color, xsmall);
+  border-width: try-set($action-bar-buttons, border-width, xsmall);
+  border-style: solid;
+  color: try-set($action-bar-buttons, color, xsmall);
+  font-size: try-set($action-bar-buttons, font-size, xsmall);
+  margin: 0;
+  padding: 0;
+  vertical-align: try-set($action-bar-buttons, vertical-align, xsmall);
+  text-align: center;
+  width: try-set($action-bar,height, xsmall);
+  height: try-set($action-bar, height, xsmall);
+  line-height: try-set($action-bar, height, xsmall);
+  &:hover {
+	background: try-set($action-bar-buttons,bg-hover, xsmall);
+	color:try-set($action-bar-buttons, color-hover, xsmall);
+  }
+}
+
+#menu-btn, #back-btn {
+  float:left;
+  text-align: left;
+  padding-right: 14px;
+  width:auto;
+  letter-spacing: try-set($action-bar-buttons, letter-spacing, xsmall);
+  .fa {
+	padding-right: 14px;
+  }
+}
+
+.action-item-container {
+  float:left;
+  position: relative; //important to position absolute stuff
+}

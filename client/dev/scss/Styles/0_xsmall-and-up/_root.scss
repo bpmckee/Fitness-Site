@@ -1,0 +1,12 @@
+@include border-box-sizing;
+
+html, body {
+  height:100%; //off-canvas related
+}
+
+body {
+  position: relative; 	//off-canvas related
+  overflow: hidden;		//off-canvas related
+  font-size: 16px;
+  font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+}

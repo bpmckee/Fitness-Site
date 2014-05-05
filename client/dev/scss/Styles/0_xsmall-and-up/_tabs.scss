@@ -1,0 +1,22 @@
+#tabs {
+  position: absolute;
+  width:100%;
+
+  a {
+	font-size:14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #444;
+	margin-right: 28px;
+	display: inline-block;
+	line-height: 42px;
+	height:42px;
+  }
+
+  .active {
+	border-bottom: 3px solid dodgerblue;
+  }
+}
+
+

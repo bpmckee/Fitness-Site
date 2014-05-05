@@ -1,0 +1,39 @@
+// return the value of a map inside a map.. Unless it's identical to the previous size
+// i.e. map => $nav: { height: { xsmall: 10px; small: 20px; medium: 20px } }
+// calling $nav, height, medium will return null because it is the same as 'small'.
+// calling $nav, height, small will return 20px because it's different than the previous 10px.
+@function try-set($map, $inner-map-property, $size){
+  $tmpVal: map-get(map-get($map, $inner-map-property), $size);
+  @if $tmpVal {
+	@if $tmpVal != get-prev($map,$inner-map-property, $size){
+	  @return $tmpVal;
+	}
+  }
+  @return null;
+}
+
+// a recursive function to give you the previous value (by size) * should probably only be called by try-set *
+// in a map. i.e. map => $nav: { height: { xsmall: 10px; small: 20px } }
+// if you call this method with $nav, height, small, it will return 10px
+@function get-prev($map, $inner-map-property, $size){
+  $newSize: null;
+  @if $size == "xlarge" {
+	$newSize: large;
+  } @else if $size == "large"{
+	$newSize: medium;
+  } @else if $size == "medium"{
+	$newSize: small;
+  } @else if $size == "small" {
+	$newSize: xsmall;
+  } @else {
+	@return null;
+  }
+
+  $tmpVal: map-get(map-get($map, $inner-map-property), $newSize);
+
+  @if $tmpVal == null {
+	@return get-prev($map, $inner-map-property, $newSize)
+  } @else {
+	@return $tmpVal
+  }
+}

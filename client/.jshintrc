@@ -1,0 +1,31 @@
+{
+	"bitwise": true,
+	"camelcase": true,
+	"curly": true,
+	"eqeqeq": false,
+	"eqnull": true,
+	"esnext": false,
+	"freeze": false,
+	"globalstrict": true,
+	"immed": true,
+	"indent": false,
+	"latedef": true,
+	"newcap": true,
+	"noarg": true,
+	"noempty": true,
+	"node": true,
+	"plusplus": false,
+	"regexp": true,
+	"smarttabs": true,
+	"strict": false,
+	"trailing": true,
+	"undef": true,
+	"unused": false,
+	"globals": {
+		"angular": true,
+		"app": true,
+		"Hammer": true,
+		"window": false,
+		"document": false
+	}
+}

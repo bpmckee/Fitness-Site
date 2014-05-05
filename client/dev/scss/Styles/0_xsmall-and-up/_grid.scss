@@ -1,0 +1,19 @@
+.test-box {
+  height:30px;
+  background:pink;
+  @include span(1);
+
+  &.blue {
+	background: lightblue;
+  }
+  &.green {
+	background: green;
+  }
+}
+
+@media (min-width: 700px) {
+  @include layout($susy-medium);
+  .test-box {
+	@include span(1);
+  }
+}

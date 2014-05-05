@@ -1,0 +1,46 @@
+$action-bar: (
+  height: (
+    xsmall: 42px,
+    medium: 56px // -- doesn't really work w/ font sizes :(
+  ),
+  z-index: (
+  	xsmall: 2
+  ),
+  bg: (
+  	xsmall: #eee
+  )
+);
+
+$action-bar-buttons: (
+  border-width: (
+  	xsmall: 0,
+  	medium: 0 0 0 1px
+  ),
+  border-color: (
+  	medium: red
+  ),
+  color: (
+  	xsmall: #444
+  ),
+  font-size: (
+  	xsmall: 17px
+  ),
+  letter-spacing: (
+  	xsmall: 1px
+  ),
+  margin: (
+  	xsmall: 0
+  ),
+  padding: (
+  	xsmall: 0
+  ),
+  vertical-align: (
+  	xsmall: baseline
+  ),
+  bg-hover: (
+  	xsmall: dodgerblue
+  ),
+  color-hover: (
+  	xsmall: white
+  )
+);

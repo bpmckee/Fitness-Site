@@ -1,0 +1,29 @@
+// Core utilities
+// Core variables and mixins
+@import "susy";
+@import "Variables/vars";
+//@import "Variables/variables";
+//@import "Functions/functions";
+//@import "Mixins/mixins";
+
+// Reset
+@import "normalize";
+
+// Core CSS
+@import "Styles/0_xsmall-and-up/site";
+
+//@media (min-width: 480px){
+//  @import "Styles/1_small-and-up/site";
+//}
+
+@media (min-width: 700px){
+  @import "Styles/2_medium-and-up/site";
+}
+
+@media (min-width: 1025px){
+  @import "Styles/3_large-and-up/site";
+}
+
+//@media (min-width: 1441px){
+//  @import "Styles/4_xlarge-and-up/site";
+//}

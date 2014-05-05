@@ -1,0 +1,33 @@
+#header {
+  height: try-set($action-bar, height, medium);
+  line-height: try-set($action-bar, height, medium);
+
+  .title {
+	display:block;
+	margin:0;
+	font-size:28px;
+	//used to simulate a float (allow other buttons on same line) and keep text centered
+	position: absolute;
+	width:100%;
+	z-index: -1;
+  }
+}
+
+.action-btn {
+  height: try-set($action-bar, height, medium);
+  line-height: try-set($action-bar, height, medium);
+  border-color: #aaa;
+  border-width: 0 0 0 1px;
+  width: try-set($action-bar,height, medium);
+  z-index: 1;
+}
+
+#menu-btn {
+  border-width: 0 1px 0 0;
+  padding:0;
+  text-align: center;
+  width:try-set($action-bar,height,medium);
+  .fa {
+	padding:0;
+  }
+}

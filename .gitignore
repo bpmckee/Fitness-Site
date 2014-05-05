@@ -1,0 +1,19 @@
+#WebStorm Files
+**/.idea/workspace.xml
+**/.idea/tasks.xml
+**/.idea/dictionaries/Billy.xml
+
+# NPM & Bower
+**/node_modules/
+**/bower_components
+
+# SCSS
+**/.sass-cache/
+*.scssc
+
+# Prod files / TMP files
+client/prod/
+client/prod/*
+client/.tmp/
+client/.tmp/*
+

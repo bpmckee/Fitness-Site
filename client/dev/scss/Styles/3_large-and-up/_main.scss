@@ -1,0 +1,20 @@
+body {
+  overflow:auto;
+  overflow-x:hidden;
+}
+
+#main {
+  margin-left: 250px;
+  overflow:auto;
+}
+#content-container {
+  top: 70px;
+  overflow: visible;
+}
+
+.overlay .sideMenuOverlay {
+  display:none;
+}
+#nav {
+  z-index:2000;
+}

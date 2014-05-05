@@ -1,0 +1,8 @@
+<ul class="dropdown-menu animate pos-bottom-right" ng-if="ddOpen">
+	<li ng-repeat="item in content">
+		<a href="#" >
+			<i class="fa fa-{{item.icon}}" ng-if="item.icon"></i>
+			{{item.label}}
+		</a>
+	</li>
+</ul>

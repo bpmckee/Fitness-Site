@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+	<meta charset="utf-8">
+	<title>Welcome to Billy's site!</title>
+	<meta name="description" content="">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+	<meta http-equiv="cleartype" content="on">
+
+	<link rel="mobile-web-app-capable" content="yes">
+	<!--
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="">
+        -->
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css" type="text/css"/>
+
+	<script src="js/es5-shim.js"></script>
+	<script src="js/angular.js"></script>
+	<script src="js/angular-animate.js"></script>
+	<script src="js/angular-ui-router.min.js"></script>
+	<script src="js/hammer.js"></script>
+	<script src="js/json3.js"></script>
+	<script src="js/main.js"></script>
+</head>
+
+<body id="body" ng-controller="StateCtrl" ng-class="{'noSlide':!slide,'back':reverse}">
+	<nav id="nav">
+		<div class="logo">My Logo</div>
+		<div class="profile">
+			<a href="#" class="profilePic">
+				<img src="imgs/ProfilePic.jpg" alt="profile">
+			</a>
+			<button type="button"
+			        class="dropdown"
+			        data-content="[{ref:'test.test',label:'Logout'},{ref:'test.test',label:'Test'}]">
+				Billy McKee
+				<i class="fa fa-angle-down"></i>
+			</button>
+		</div>
+		<ul class="navLinks">
+			<li ng-repeat="link in navLinks">
+				<a ui-sref="{{link.ref}}">
+					<i class="fa fa-{{link.icon}}"></i>
+					{{link.label}}
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<main id="main" side-menu ui-view></main>
+</body>
+</html>
