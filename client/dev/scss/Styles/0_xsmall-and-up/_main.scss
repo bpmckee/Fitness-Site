@@ -25,6 +25,7 @@
 
 #content {
   margin-top:56px; // -- this is so the tabs are visible.
+  padding:0 14px; // -- gutters
   position: absolute;
   width:100%;
   //TODO: overwrite the margin top w/ 0 if there are no tabs.

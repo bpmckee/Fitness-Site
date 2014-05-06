@@ -52,7 +52,8 @@ $panel-normal-text-color: #596679;  //Non-panel-bold-header
 #food-table {
   clear:both;
   @include susy-clearfix;
-  margin-left:10px;
+//  margin-left:10px;
+  margin-right:-14px; // --offset gutter
 }
 
 .edit {

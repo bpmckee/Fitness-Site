@@ -11,6 +11,9 @@ body {
   top: 70px;
   overflow: visible;
 }
+#content {
+  padding:0 56px; // -- gutters
+}
 
 .overlay .sideMenuOverlay {
   display:none;
