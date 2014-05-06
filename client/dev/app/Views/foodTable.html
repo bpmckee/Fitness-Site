@@ -1,80 +1,20 @@
-<div id="food-table">
-	<div id="food-table-left">
-		<div class="stretcher">
-			<div  class="meal-wrapper"
-			      ng-repeat="meal in dataLog"
-			      ng-class="{empty: meal.children.length == 0}">
-				<div class="meal">
-					<button type="button"><i class="fa fa-chevron-right"></i></button>
-					<span>{{ meal.name }}</span>
-				</div>
-				<div class="contents">
-					<div ng-repeat="child in meal.children">
+<div>
+	<h1>TRACKING FOOD</h1>
+	<p>This is the spot where we track food</p>
+	<a ui-sref="trackFood.edit" no-slide>Edit</a>
+	<a ui-sref="trackFood.search">Search</a>
 
-						<div  ng-if="child.type == 'food'"
-						      class="food-wrapper"
-						      ng-class="{empty: child.children.length == 0}">
-							<div class="food">
-								<button type="button"><i class="fa fa-chevron-right"></i></button>
-								<span>{{ child.name }}</span>
-							</div>
-							<div class="contents">
+	<br>
+	<span>Slide: {{main.slide}}</span>
 
-								<div  ng-repeat="ingrChild in child.children"
-								      class="ingr">
-									<span class="name">{{ ingrChild.name }}</span>
-									<div>
-										<span class="brand">{{ ingrChild.brand }}</span>
-										<span class="servings">{{ ingrChild.servings }}</span>
-									</div>
-								</div>
-							</div>
-						</div>
+	<h2>Lorem Ipsum I</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit luctus fringilla. Nunc adipiscing leo in sapien fringilla faucibus quis ac leo. Curabitur sem massa, mattis quis quam a, hendrerit porta nibh. Pellentesque tortor erat, blandit ut sapien elementum, consequat ornare justo. In vitae elementum nibh. Fusce eget tortor magna. Nulla mollis lacus adipiscing consequat vulputate. Nulla fringilla nunc tempor luctus convallis. Maecenas quis odio diam. Donec elit sapien, elementum et lobortis a, dapibus non risus.</p>
+	<p>Aliquam lobortis ante vitae arcu vehicula, iaculis faucibus diam feugiat. Nullam scelerisque hendrerit mi luctus auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean nec posuere quam. Suspendisse potenti. Integer placerat facilisis pulvinar. Nullam vitae quam tortor.</p>
 
-						<div  ng-if="child.type == 'ingr'"
-						      class="ingr">
-							<span class="name">{{ child.name }}</span>
-							<div>
-								<span class="brand">{{ child.brand }}</span>
-								<span class="servings">{{ child.servings }}</span>
-							</div>
-						</div>
+	<h3>Lorem Ipsum II</h3>
+	<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus cursus, tortor tempor fermentum condimentum, ligula eros dignissim tellus, ac semper nisi ante a sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam id dictum erat, vitae tristique quam. Integer aliquet luctus aliquam. Pellentesque eget nisi metus. Nam sit amet pretium orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ornare cursus turpis eget porttitor. Nulla accumsan felis nec enim varius, et viverra est suscipit. Ut consequat accumsan odio, fermentum ullamcorper justo consectetur at. Nunc mattis bibendum tellus, et tempus justo varius non.</p>
+	<p>Vestibulum eleifend in ipsum sed commodo. Curabitur condimentum auctor libero in suscipit. Vestibulum eget elit in elit accumsan ornare vitae et velit. Morbi feugiat enim quam, vitae cursus est dignissim quis. Mauris metus sapien, egestas sit amet ultricies eget, porttitor id eros. Duis posuere lacus tortor, ac sagittis massa consequat eu. Pellentesque aliquam, ligula dignissim eleifend venenatis, tellus sem accumsan lorem, sit amet porttitor ipsum lectus vitae tellus.</p>
 
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id="food-table-right">
-		<div class="stretcher">
-			<div  class="meal-wrapper"
-			      ng-repeat="meal in dataLog"
-			      ng-class="{empty: meal.children.length == 0}">
-				<div class="meal">
-					<div ng-repeat="val in meal.nutrition">{{ val }}</div>
-				</div>
-				<div class="contents">
-					<div ng-repeat="child in meal.children">
-						<div  ng-if="child.type == 'food'"
-						      class="food-wrapper"
-						      ng-class="{empty: child.children.length == 0}">
-							<div class="food">
-								<div ng-repeat="val in child.nutrition">{{ val }}</div>
-							</div>
-							<div class="contents">
-								<div  ng-repeat="ingrObj in child.children"
-								      class="ingr">
-									<div ng-repeat="val in ingrObj.nutrition">{{ val }}</div>
-								</div>
-							</div>
-						</div>
-						<div  ng-if="child.type == 'ingr'"
-						      class="ingr">
-							<div ng-repeat="val in child.nutrition">{{ val }}</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	<h3>Lorem Ipsum III</h3>
+	<P>Donec lacus arcu, tincidunt eget diam at, scelerisque consequat massa. Aenean consectetur scelerisque velit sit amet egestas. In pulvinar vitae felis ac imperdiet. Phasellus dictum nisi vitae ipsum imperdiet porta. Nullam malesuada scelerisque magna, a placerat tortor dignissim id. Pellentesque id nibh et risus semper cursus non sit amet dolor. In sed pharetra nisi. Etiam sollicitudin dolor at nisl consequat auctor. Mauris ante neque, sagittis feugiat ligula vitae, tristique tincidunt mauris. Pellentesque faucibus elit justo, id tristique libero auctor vitae. Cras euismod nisi lectus. Suspendisse consequat elit eu lobortis condimentum. Donec nec euismod diam.</P>
 </div>

@@ -8,6 +8,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			abstract: true,
 			url: '/track',
 			templateUrl: 'templates/root.html',
+			controller: 'FoodTableCtrl',
 			data: {
 				title: "Track",
 				tabs: [
