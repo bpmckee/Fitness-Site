@@ -59,15 +59,13 @@ app.service('viewHistoryService',function($window){
 		_setHistoryHelpers();
 	};
 
-	this.slideEnabled = function(){
-		return slide;
+	this.slide = slide;
+	var self = this; //NOTE: for whatever reason, this only works if I say this.slide... weird
+	this.getSlide = function(){
+		return self.slide;
 	};
 
-	this.enableSlide = function(){
-		slide = true;
-	};
-
-	this.disableSlide = function(){ //change to "NextViewOptions" if you need anything besides disableAnimation (i.e. disable back btn)
-		slide = false;
+	this.setSlide = function(param){
+		self.slide = !!param;
 	};
 });

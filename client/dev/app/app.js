@@ -32,6 +32,12 @@ app.config(function($stateProvider, $urlRouterProvider){
 						icon: "fa-pencil",
 						type: "dropdown",
 						content: [1,3,5]
+					},
+					{
+						txt: "Add",
+						icon: "fa-plus",
+						classes: 'no-slide',
+						toState: 'trackFood.edit'
 					}
 				]
 			},

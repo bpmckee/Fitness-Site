@@ -31,9 +31,9 @@ app.controller('StateCtrl', function($scope, viewHistoryService, $window, $state
 			hist.addView({ url: newUrl });
 		}
 
-		$scope.slide = hist.slideEnabled();
+		$scope.slide = hist.getSlide();
 		$scope.reverse = reverse;
-		hist.enableSlide();
+		hist.setSlide(true);
 	});
 
 	$scope.$on('$stateChangeSuccess',function(evt, toState){

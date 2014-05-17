@@ -6,7 +6,7 @@ app.directive('noSlide',function(viewHistoryService){
 				hammer = new Hammer(element);
 
 			hammer.on('tap',function(){
-				viewHistoryService.disableSlide();
+				viewHistoryService.setSlide(false);
 			});
 
 			$scope.$on('destroy',function(){

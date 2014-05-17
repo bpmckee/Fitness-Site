@@ -6,6 +6,7 @@
   z-index: try-set($action-bar, z-index, xsmall);
   background: try-set($action-bar, bg, xsmall);
   text-align: center;
+  box-shadow: 0 1px 1px #ccc;
 
   .right-btns {
 	float:right;

@@ -22,7 +22,7 @@ app.directive('actionItem',function($compile){
 						tpl = '<div>Calendar</div>';
 						break;
 					default:
-						tpl = '<a ui-sref="{{action.toState}}" class="no-slide action-btn"><i class="fa" ng-class="{{\'action.icon\'}}" ng-if="action.icon"></i></a>';
+						tpl = '<a ui-sref="{{action.toState}}" class="action-btn '+$scope.action.classes+'"><i class="fa" ng-class="{{\'action.icon\'}}" ng-if="action.icon"></i></a>';
 				}
 			}
 
