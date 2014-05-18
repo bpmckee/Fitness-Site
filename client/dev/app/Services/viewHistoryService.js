@@ -1,4 +1,4 @@
-app.service('viewHistoryService',function($window){
+app.service('viewHistoryService',function(){
 
 	//Private stuff
 	var	previousView ,
@@ -16,7 +16,6 @@ app.service('viewHistoryService',function($window){
 		previousView = _getViewAtIndex(historyIndex - 1);
 		currentView = _getViewAtIndex(historyIndex);
 		nextView = _getViewAtIndex(historyIndex + 1);
-		console.log(historyStack);
 	};
 
 	var _clearFutureHistory = function(){
@@ -47,7 +46,7 @@ app.service('viewHistoryService',function($window){
 	this.goForward = function(){
 //		$window.history.forward();
 		historyIndex++;
-		slide = nextView.slide;
+		nextView.slide = slide;
 		_setHistoryHelpers();
 	};
 
@@ -59,13 +58,11 @@ app.service('viewHistoryService',function($window){
 		_setHistoryHelpers();
 	};
 
-	this.slide = slide;
-	var self = this; //NOTE: for whatever reason, this only works if I say this.slide... weird
 	this.getSlide = function(){
-		return self.slide;
+		return slide;
 	};
 
 	this.setSlide = function(param){
-		self.slide = !!param;
+		slide = !!param;
 	};
 });
