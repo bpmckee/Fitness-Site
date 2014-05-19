@@ -38,6 +38,13 @@ app.config(function($stateProvider, $urlRouterProvider){
 						icon: "fa-plus",
 						classes: 'no-slide',
 						toState: 'trackFood.edit'
+					},
+					{
+						txt: "Calendar",
+						icon: "fa-calendar",
+						type: "calendar",
+						content: [1,3,5],
+						tplUrl: 'templates/popover_calendar.html'
 					}
 				]
 			},

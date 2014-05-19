@@ -105,6 +105,8 @@ app.constant('dropdownConfig', {
 		link: function($scope, $element, $attrs, dropdownCtrl){
 			if(!dropdownCtrl) { return; }
 
+			console.log('TEMPLATE URL',$scope.tplUrl);
+
 			var initialized = false;
 
 			dropdownCtrl.init($element);
@@ -112,7 +114,7 @@ app.constant('dropdownConfig', {
 
 			var initDropdown = function(){
 				if(initialized) {return;}
-				var templateUrl = $scope.tplURl || 'templates/dropdownList.html';
+				var templateUrl = $scope.tplUrl || 'templates/dropdownList.html';
 				var menuTemplateHtml = $templateCache.get(templateUrl);
 
 				var $menuElement = $compile(angular.element(menuTemplateHtml))($scope);
@@ -128,14 +130,7 @@ app.constant('dropdownConfig', {
 				}
 			};
 
-			if($scope.init !== false){
-				initDropdown();
-			}else{
-				$scope.$watch('init',function(){
-					initDropdown();
-				});
-
-			}
+			initDropdown();
 
 
 			// setup handler
